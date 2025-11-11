@@ -1,0 +1,42 @@
+describe('pruebas de la página TODO', () => {
+  /* ejemplo 
+  it('añadir tarea', () => {
+    cy.visit('https://todomvc.com/examples/react/dist/')
+    cy.get('[data-testid="text-input"]').type("comprar el pan{enter}")
+  }) */
+
+
+   it('Agregar tarea a la lista', () => {
+    cy.visit('https://todomvc.com/examples/react/dist/')
+    cy.get('[data-testid="text-input"]').type("comprar el pan{enter}")
+    cy.get('[data-testid="todo-item-label"]').contains('comprar el pan')
+  })
+
+   it('Marcar tarea completada', () => {
+    cy.visit('https://todomvc.com/examples/react/dist/')
+    cy.get('[data-testid="text-input"]').type("ir al gym{enter}")
+    cy.get('[data-testid="todo-item-toggle"]').click()
+    cy.get('[data-testid="todo-item-label"]').check()
+  })
+/*
+   it('añadir tarea', () => {
+    cy.visit('https://todomvc.com/examples/react/dist/')
+    cy.get('[data-testid="text-input"]').type("comprar el pan{enter}")
+  })
+
+   it('añadir tarea', () => {
+    cy.visit('https://todomvc.com/examples/react/dist/')
+    cy.get('[data-testid="text-input"]').type("comprar el pan{enter}")
+  })
+
+   it('añadir tarea', () => {
+    cy.visit('https://todomvc.com/examples/react/dist/')
+    cy.get('[data-testid="text-input"]').type("comprar el pan{enter}")
+  })
+
+   it('añadir tarea', () => {
+    cy.visit('https://todomvc.com/examples/react/dist/')
+    cy.get('[data-testid="text-input"]').type("comprar el pan{enter}")
+  })*/
+
+})
